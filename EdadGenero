@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class EdadGenero {
+    
+    public static void main(String [] args){
+            Scanner sc = new Scanner(System.in);
+            System.out.println("¿Hola, cuál es tu género?");
+        //nextLine se utiliza cuando intentamos leer cadenas de caracteres desde el teclado.
+             String genero = sc.nextLine();
+        
+                  
+          switch (genero) {
+            case "femenino":
+                genero = "femenino";
+                System.out.println("Eres una mujer");
+                break;
+            case "masculino":
+                genero = "masculino";
+                System.out.println("Eres un hombre");
+                break;
+            default:
+                System.out.println("coloco una palabra incorrecta");
+                break;
+        }
+    
+    
+     System.out.println("¿Cuál es tu edad?");
+             int edad = sc.nextInt();
+            
+             if (edad < 18){
+                System.out.println("Eres menor de edad");
+        }
+                else {    
+               
+                 System.out.println ("Eres mayor de edad");
+        }    
+    
+     if (edad>=18 && genero=="femenino"){
+          System.out.println("hola eres una mujer de  " + edad + "años . Eres mayor de edad");
+    }
+    
+     if (edad>=18 && genero=="masculino"){
+          System.out.println("hola eres un hombre de  " + edad + "años . Eres mayor de edad");
+    }
+    
+    }
+}
+
